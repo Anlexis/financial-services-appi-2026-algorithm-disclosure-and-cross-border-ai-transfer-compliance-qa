@@ -1,0 +1,12 @@
+# Runtime parameters — loaded by AgentRegistry, passed as Graph(config=...).
+# Separate from config/agent.yaml (the static manifest).
+#
+# Reader map (every key here has a live consumer — do not declare dead keys):
+#   max_retry            — framework backbone retry loop
+#   default_top_k        — RankNode truncation default (per-request top_k wins)
+#   enforcement_deadline — GenerateNode checklist line + PostProcessNode
+#                          HIGH-risk deadline warning (ISO date)
+
+max_retry: 3
+default_top_k: 5
+enforcement_deadline: "2026-07-06"
